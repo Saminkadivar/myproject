@@ -26,7 +26,7 @@ body {
     transition: color 0.3s ease;
   }
   a:hover, a:focus {
-    color: #0ea5e9;
+    color: #085a80a7;
     outline: none;
   }
   /* Container */
@@ -95,7 +95,7 @@ nav ul li a .material-icons {
     font-weight: 800;
     font-size: 2.75rem;
     margin-bottom: 24px;
-    background: linear-gradient(90deg, #0ea5e9, #0ea5e9);
+    background: linear-gradient(90deg, #0ea5e9, #0ea4e955);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -120,7 +120,7 @@ nav ul li a .material-icons {
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    border: 4px solid #0ea5e9 ;
+    border: 4px solid #0ea4e93f ;
   }
   .hero-photo img {
     width: 100%;
@@ -138,7 +138,7 @@ nav ul li a .material-icons {
     font-size: 3.25rem;
     font-weight: 900;
     margin: 0 0 20px 0;
-    color: #a7ffeb;
+    color: #0ea5e9;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   }
   .hero-content p {
@@ -150,22 +150,27 @@ nav ul li a .material-icons {
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   }
   .btn-contact {
-    background-color: #64ffda;
+    background-color: #0ea5e9;
     border: none;
     border-radius: 36px;
     padding: 14px 38px;
     cursor: pointer;
     font-weight: 700;
     font-size: 1.125rem;
-    color: #004d40;
+    color: #fff;
     width: fit-content;
-    box-shadow: 0 8px 20px rgba(100, 255, 218, 0.7);
+    box-shadow: 0 1px 35px #f1f5f992;
     transition: background-color 0.3s ease, transform 0.2s ease;
   }
   .btn-contact:hover,
   .btn-contact:focus {
-    background-color: #1de9b6;
+    background-color: #f1f5f9;
+        box-shadow: 0 1px 35px #0ea4e9b1;
+    color: #0ea5e9;
+
+
     outline: none;
+
     transform: translateY(-4px);
   }
   /* About Section */
@@ -182,7 +187,7 @@ nav ul li a .material-icons {
     margin-top: 32px;
   }
   .skill-chip {
-    background: rgba(34, 197, 94, 0.2);
+    background: #0ea4e925;
     color: #0ea5e9;
     border-radius: 16px;
     padding: 8px 16px;
@@ -204,18 +209,18 @@ nav ul li a .material-icons {
     gap: 28px;
   }
   .project-card {
-    background: rgba(8, 64, 37, 0.9);
+    background: #0ea4e955;
     border-radius: 16px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 12px rgba(34,197,94,0.25);
+    box-shadow: 0 4px 12px #0ea4e93f    ;
     cursor: pointer;
   }
   .project-card:hover, .project-card:focus-within {
     transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(34,197,94,0.5);
+    box-shadow: 0 12px 24px #0ea4e93f;
     outline: none;
   }
   .project-image {
@@ -278,8 +283,8 @@ nav ul li a .material-icons {
     margin-bottom: 24px;
   }
   .btn-resume {
-    background: #0ea5e9;
-    color: #0f172a;
+    background: #0ea5e9 ;
+    color: #f1f5f9;
     border: none;
     padding: 14px 36px;
     font-weight: 700;
@@ -287,10 +292,14 @@ nav ul li a .material-icons {
     border-radius: 32px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 8px 15px rgba(34,197,94,0.5);
+    box-shadow: 0 1px 35px #f1f5f9a5;
   }
   .btn-resume:hover, .btn-resume:focus {
-    background: #0ea5e9;
+    background: #f1f5f9;
+        color: #0ea5e9;
+
+        box-shadow: 0 1px 35px #0ea4e9b3;
+
     transform: translateY(-4px);
     outline: none;
   }
@@ -299,10 +308,10 @@ nav ul li a .material-icons {
     max-width: 520px;
     margin-left: auto;
     margin-right: auto;
-    background: rgba(8, 64, 37, 0.9);
+    background: #085a80a7;
     border-radius: 16px;
     padding: 24px 32px;
-    box-shadow: 0 4px 12px rgba(34,197,94,0.25);
+    box-shadow: 0 4px 12px #085a80a7;
   }
   #contact label {
     display: block;
@@ -318,7 +327,7 @@ nav ul li a .material-icons {
     margin-bottom: 18px;
     font-size: 1rem;
     font-family: inherit;
-    background: #152e13;
+    background: #085a80a7;
     color: #e0e0e0;
     transition: background-color 0.3s ease;
   }
@@ -329,7 +338,7 @@ nav ul li a .material-icons {
   }
   #contact button {
     background: #0ea5e9;
-    color: #0f172a;
+    color: #f1f5f9;
     font-weight: 700;
     font-size: 1.125rem;
     padding: 14px 36px;
@@ -337,17 +346,20 @@ nav ul li a .material-icons {
     border-radius: 32px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 8px 15px rgba(34,197,94,0.5);
+    box-shadow: 0 1px 35px #f1f5f9b7;
   }
   #contact button:hover, #contact button:focus {
-    background: #0ea5e9;
+    background: #f1f5f9;
+        box-shadow: 0 1px 35px #0ea4e9c5;
+    color: #0ea5e9;
+
     transform: translateY(-4px);
     outline: none;
   }
   /* Footer */
   footer {
-    background: #0ea5e9;
-    color: #a7a7a7;
+    background: #0203064a;
+    color: #0ea5e9;
     text-align: center;
     padding: 16px 0;
     font-size: 0.875rem;
@@ -367,7 +379,7 @@ nav ul li a .material-icons {
   @media(max-width: 768px) {
     nav ul {
       flex-direction: column;
-      background: #065f46;
+      background: #0f172a;
       position: fixed;
       top: 60px;
       right: 0;
@@ -439,14 +451,14 @@ nav ul li a .material-icons {
     pointer-events: auto;
   }
   .modal {
-    background: #064e3b;
+    background: #085a80a7;
     border-radius: 16px;
     max-width: 700px;
     width: 90%;
     max-height: 85vh;
     overflow-y: auto;
     padding: 24px 32px 32px 32px;
-    box-shadow: 0 12px 48px rgba(5, 150, 105, 0.7);
+    box-shadow: 0 12px 48px #0ea4e955;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -478,7 +490,7 @@ nav ul li a .material-icons {
     user-select: none;
     cursor: pointer;
     flex-shrink: 0;
-    box-shadow: 0 3px 8px rgba(34,197,94,0.5);
+    box-shadow: 0 3px 8px #0ea4e93f;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 3px solid transparent;
   }
@@ -488,7 +500,7 @@ nav ul li a .material-icons {
     border-color: #0ea5e9;
     outline: none;
     transform: scale(1.05);
-    box-shadow: 0 6px 16px rgba(34,197,94,0.9);
+    box-shadow: 0 6px 16px #0ea4e93f;
   }
   .modal .main-image-wrapper {
     flex-grow: 1;
@@ -500,7 +512,7 @@ nav ul li a .material-icons {
     max-height: 320px;
     border-radius: 16px;
     user-select: none;
-    box-shadow: 0 8px 24px rgba(34,197,94,0.7);
+    box-shadow: 0 8px 24px #0ea4e955;
   }
   .modal .close-btn {
     position: absolute;
@@ -545,7 +557,6 @@ nav ul li a .material-icons {
     </ul>
   </nav>
   <div class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false" role="button" tabindex="0">
-    <span></span>
     <span></span>
     <span></span>
   </div>
