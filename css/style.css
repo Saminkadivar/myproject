@@ -355,7 +355,7 @@ nav ul li a .material-icons {
   align-items: center;
   padding: 60px 20px;
   text-align: center;
-  background-color: #f9f9f9;
+
 }
 
 /* Section Heading */
@@ -372,7 +372,7 @@ nav ul li a .material-icons {
   width: 100%;
   margin: 0 auto;
   font-size: 1rem;
-  color: #555;
+  color: #f3f3f3;
 }
 
 /* Each Contact Row */
@@ -382,13 +382,13 @@ nav ul li a .material-icons {
 
 /* Anchor Styling */
 .contact-details a {
-  color: #007bff;
   text-decoration: none;
   word-break: break-word;
 }
 
 .contact-details a:hover {
   text-decoration: underline;
+  color: #f3f3f3;
 }
 
 /* Responsive Font Size */
