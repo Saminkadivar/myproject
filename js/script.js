@@ -85,11 +85,11 @@ description: 'An online book rental platform with user-friendly UI, security dep
       title: 'Portfolio Website',
       description: 'Personal website showcasing projects, skills, and contact information with responsive design and modern UI/UX elements.',
       images: [
-                {src: 'img/my project/homepage.png', alt: ''},
-                {src: 'img/my project/about.png', alt: ''},
-                {src: 'img/my project/project.png', alt: ''},
-                {src: 'img/my project/projetimg.png', alt: ''},
-                {src: 'img/my project/contactus.png', alt: ''},
+                {src: 'img/my project/homepage.webp', alt: ''},
+                {src: 'img/my project/about.webp', alt: ''},
+                {src: 'img/my project/project.webp', alt: ''},
+                {src: 'img/my project/projetimg.webp', alt: ''},
+                {src: 'img/my project/contactus.webp', alt: ''},
 
     ]
     }
