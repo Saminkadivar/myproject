@@ -295,7 +295,7 @@ nav ul li a .material-icons {
     outline: none;
   }
   /* Contact Section */
-  #contact form {
+  .contact form {
     max-width: 520px;
     margin-left: auto;
     margin-right: auto;
@@ -304,13 +304,13 @@ nav ul li a .material-icons {
     padding: 24px 32px;
     box-shadow: 0 4px 12px #085a80a7;
   }
-  #contact label {
+  .contact label {
     display: block;
     margin-bottom: 6px;
     font-weight: 600;
     color: #d1fae5;
   }
-  #contact input, #contact textarea {
+  .contact input, .contact textarea {
     width: 100%;
     padding: 12px 14px;
     border-radius: 8px;
@@ -322,12 +322,12 @@ nav ul li a .material-icons {
     color: #e0e0e0;
     transition: background-color 0.3s ease;
   }
-  #contact input:focus, #contact textarea:focus {
+  .contact input:focus, .contact textarea:focus {
     background: #0ea5e9;
     color: #0f172a;
     outline: none;
   }
-  #contact button {
+  .contact button {
     background: #0ea5e9;
     color: #f1f5f9;
     font-weight: 700;
@@ -339,7 +339,7 @@ nav ul li a .material-icons {
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 1px 35px #f1f5f9b7;
   }
-  #contact button:hover, #contact button:focus {
+  .contact button:hover, .contact button:focus {
     background: #f1f5f9;
         box-shadow: 0 1px 35px #0ea4e9c5;
     color: #0ea5e9;
