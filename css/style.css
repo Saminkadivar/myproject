@@ -295,7 +295,7 @@ nav ul li a .material-icons {
     outline: none;
   }
   /* Contact Section */
-  #contact form {
+/*   #contact form {
     max-width: 520px;
     margin-left: auto;
     margin-right: auto;
@@ -346,7 +346,61 @@ nav ul li a .material-icons {
 
     transform: translateY(-4px);
     outline: none;
+  } */
+/* Container & Section Styling */
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+/* Section Heading */
+#contact .section-heading {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Contact Details */
+.contact-details {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Each Contact Row */
+.contact-details p {
+  margin: 15px 0;
+}
+
+/* Anchor Styling */
+.contact-details a {
+  color: #007bff;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Font Size */
+@media (max-width: 600px) {
+  #contact .section-heading {
+    font-size: 1.8rem;
   }
+
+  .contact-details {
+    font-size: 0.95rem;
+  }
+}
+
   /* Footer */
   footer {
     background: #0203064a;
