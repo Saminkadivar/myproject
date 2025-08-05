@@ -54,14 +54,14 @@
       title: 'Ticket Master',
       description: 'A cinema ticket booking system with seat selection, payment gateway integration, and printable tickets.',
       images: [
-        {src: 'img/ticket master/udashboard.png', alt: ''},
-        {src: 'img/ticket master/moviedetail.png', alt: ''},
-        {src: 'img/ticket master/showtime.png', alt: ''},
-        {src: 'img/ticket master/seatselect.png', alt: ''},
-        {src: 'img/ticket master/paymentoption.png', alt: ''},
-        {src: 'img/ticket master/onlinepayment.png', alt: ''},
-        {src: 'img/ticket master/paymentconfirm.png', alt: ''},
-        {src: 'img/ticket master/ticketprint.png', alt: ''},
+        {src: 'img/ticket master/udashboard.webp', alt: ''},
+        {src: 'img/ticket master/moviedetail.webp', alt: ''},
+        {src: 'img/ticket master/showtime.webp', alt: ''},
+        {src: 'img/ticket master/seatselect.webp', alt: ''},
+        {src: 'img/ticket master/paymentoption.webp', alt: ''},
+        {src: 'img/ticket master/onlinepayment.webp', alt: ''},
+        {src: 'img/ticket master/paymentconfirm.webp', alt: ''},
+        {src: 'img/ticket master/ticketprint.webp', alt: ''},
       ]
     },
     taskManager: {
