@@ -49,8 +49,23 @@
   });
 
   // Project data for modal
+ laravel ecommerce: {
+      title: 'Laravel E-commerce',
+      description: 'A Laravel-based E-commerce web application with authentication, product catalog, cart, checkout, and order management features.',
+      images: [
+                {src: 'img/ecommece/login.webp', alt: ''},
+                {src: 'img/ecommece/register.webp', alt: ''},
+                {src: 'img/ecommece/homepage.webp', alt: ''},
+                {src: 'img/ecommece/product.webp', alt: ''},
+                {src: 'img/ecommece/cart.webp', alt: ''},
+                {src: 'img/ecommece/checkout.webp', alt: ''},
+                {src: 'img/ecommece/invoice.webp', alt: ''},
+
+    ]
+    }
+  };
   const projectsData = {
-    weatherApp: {
+    Ticket Master: {
       title: 'Ticket Master',
       description: 'A cinema ticket booking system with seat selection, payment gateway integration, and printable tickets.',
       images: [
@@ -64,7 +79,7 @@
         {src: 'img/ticket master/ticketprint.webp', alt: ''},
       ]
     },
-    taskManager: {
+    Book Heaven: {
       title: 'Book Heaven',
 description: 'An online book rental platform with user-friendly UI, security deposit tracking, and overdue handling.',
       images: [
