@@ -49,7 +49,7 @@
   });
 
   // Project data for modal
- laravel ecommerce: {
+ laravelecommerce: {
       title: 'Laravel E-commerce',
       description: 'A Laravel-based E-commerce web application with authentication, product catalog, cart, checkout, and order management features.',
       images: [
@@ -65,7 +65,7 @@
     }
   };
   const projectsData = {
-    Ticket Master: {
+    TicketMaster: {
       title: 'Ticket Master',
       description: 'A cinema ticket booking system with seat selection, payment gateway integration, and printable tickets.',
       images: [
@@ -79,7 +79,7 @@
         {src: 'img/ticket master/ticketprint.webp', alt: ''},
       ]
     },
-    Book Heaven: {
+    BookHeaven: {
       title: 'Book Heaven',
 description: 'An online book rental platform with user-friendly UI, security deposit tracking, and overdue handling.',
       images: [
