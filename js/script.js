@@ -49,6 +49,7 @@
   });
 
   // Project data for modal
+  const projectsData = {
  laravelecommerce: {
       title: 'Laravel E-commerce',
       description: 'A Laravel-based E-commerce web application with authentication, product catalog, cart, checkout, and order management features.',
@@ -64,7 +65,6 @@
     ]
     },
   
-  const projectsData = {
     TicketMaster: {
       title: 'Ticket Master',
       description: 'A cinema ticket booking system with seat selection, payment gateway integration, and printable tickets.',
