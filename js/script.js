@@ -62,8 +62,8 @@
                 {src: 'img/ecommece/invoice.webp', alt: ''},
 
     ]
-    }
-  };
+    },
+  
   const projectsData = {
     TicketMaster: {
       title: 'Ticket Master',
