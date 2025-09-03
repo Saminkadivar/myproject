@@ -1,4 +1,4 @@
-  /* Reset */
+ /* Reset */
   *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -11,8 +11,73 @@ body {
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
 }
+/* Certificates Section */
+#certificates .certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
 
-a {
+.certificatecontainer {
+    max-width: 1200px;
+    /* max-height: 800px; */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+.certificate-card {
+  background: #0ea4e925;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px #0ea4e93f;
+  cursor: pointer;
+}
+
+.certificate-card:hover,
+.certificate-card:focus-within {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px #0ea4e93f;
+  outline: none;
+}
+
+.certificate-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 16px;
+  user-select: none;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+.certificate-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+  color: #d1fae5;
+}
+
+.certificate-desc {
+  font-size: 0.95rem;
+  color: #a7a7a7;
+}
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    color: #f1f5f9;
+  }
+  p {
+    margin-bottom: 16px;
+    color: #a7a7a7;
+  }
+
+  a {
     color: #0ea5e9;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -23,7 +88,7 @@ a {
   }
   /* Container */
   .container {
-    max-width: 960px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 16px;
@@ -217,7 +282,7 @@ nav ul li a .material-icons {
   }
   .project-image {
     width: 100%;
-    height: 160px;
+    height: 100%;
     border-radius: 12px;
     object-fit: cover;
     margin-bottom: 16px;
@@ -296,12 +361,12 @@ nav ul li a .material-icons {
     outline: none;
   }
   /* Contact Section */
-/*   #contact form {
+  #contact form {
     max-width: 520px;
     margin-left: auto;
     margin-right: auto;
     background: #085a80a7;
-    border-radius: 10px;
+    border-radius: 16px;
     padding: 24px 32px;
     box-shadow: 0 4px 12px #085a80a7;
   }
@@ -347,61 +412,7 @@ nav ul li a .material-icons {
 
     transform: translateY(-4px);
     outline: none;
-  } */
-/* Container & Section Styling */
-#contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 60px 20px;
-  text-align: center;
-
-}
-
-/* Section Heading */
-#contact .section-heading {
-  font-size: 2.2rem;
-  margin-bottom: 30px;
-  font-weight: bold;
-  color: #333;
-}
-
-/* Contact Details */
-.contact-details {
-  max-width: 500px;
-  width: 100%;
-  margin: 0 auto;
-  font-size: 1rem;
-  color: #f3f3f3;
-}
-
-/* Each Contact Row */
-.contact-details p {
-  margin: 15px 0;
-}
-
-/* Anchor Styling */
-.contact-details a {
-  text-decoration: none;
-  word-break: break-word;
-}
-
-.contact-details a:hover {
-  text-decoration: underline;
-  color: #f3f3f3;
-}
-
-/* Responsive Font Size */
-@media (max-width: 600px) {
-  #contact .section-heading {
-    font-size: 1.8rem;
   }
-
-  .contact-details {
-    font-size: 0.95rem;
-  }
-}
-
   /* Footer */
   footer {
     background: #0203064a;
@@ -499,8 +510,8 @@ nav ul li a .material-icons {
   .modal {
     background: #085a80a7;
     border-radius: 16px;
-    max-width: 700px;
-    width: 90%;
+    max-width: 800px;
+    width: 100%;
     max-height: 85vh;
     overflow-y: auto;
     padding: 24px 32px 32px 32px;
@@ -555,7 +566,7 @@ nav ul li a .material-icons {
   }
   .modal .main-image-wrapper img {
     max-width: 100%;
-    max-height: 320px;
+    max-height: 520px;
     border-radius: 16px;
     user-select: none;
     box-shadow: 0 8px 24px #0ea4e955;
@@ -588,11 +599,11 @@ nav ul li a .material-icons {
   .modal .images::-webkit-scrollbar-track {
     background: rgba(255,255,255,0.05);
   }
-  #contact-details a {
+  .contact-details a {
   color: #0077b5; /* LinkedIn blue */
   text-decoration: none;
 }
-#contact-details a:hover {
+.contact-details a:hover {
   text-decoration: underline;
 }
 
@@ -606,3 +617,114 @@ nav ul li a .material-icons {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+ .crmodal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 5000;
+  }
+  .crmodal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .crmodal {
+    background: #085a80a7;
+    border-radius: 16px;
+    max-width: 800px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 24px 32px 32px 32px;
+    box-shadow: 0 12px 48px #0ea4e955;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: #d1fae5;
+    font-size: 1rem;
+  }
+  .crmodal h3 {
+    margin-top: 0;
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    background: linear-gradient(90deg, #0ea5e9, #0ea5e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .crmodal .description {
+    margin-bottom: 16px;
+    color: #a7a7a7;
+  }
+  .crmodal .images {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    margin-bottom: 20px;
+  }
+  .crmodal .images img {
+    max-height: 160%;
+    border-radius: 12px;
+    user-select: none;
+    cursor: pointer;
+    flex-shrink: 0;
+    box-shadow: 0 3px 8px #0ea4e93f;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid transparent;
+  }
+  .crmodal .images img.selected,
+  .crmodal .images img:hover,
+  .crmodal .images img:focus {
+    border-color: #0ea5e9;
+    outline: none;
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px #0ea4e93f;
+  }
+  .crmodal .main-image-wrapper {
+    flex-grow: 1;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .crmodal .main-image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 16px;
+    user-select: none;
+    box-shadow: 0 8px 24px #0ea4e955;
+  }
+  .crmodal .close-btn {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    color: #0ea5e9;
+    font-size: 32px;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.3s ease;
+  }
+  .crmodal .close-btn:hover,
+  .crmodal .close-btn:focus {
+    color: #0ea5e9;
+    outline: none;
+  }
+  /* Scrollbar for crmodal images */
+  .crmodal .images::-webkit-scrollbar {
+    height: 10px;
+  }
+  .crmodal .images::-webkit-scrollbar-thumb {
+    background: #0ea5e9;
+    border-radius: 5px;
+  }
+  .crmodal .images::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.05);
+  }
