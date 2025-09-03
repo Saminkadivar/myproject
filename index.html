@@ -1,12 +1,18 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Personal Portfolio - Developer &amp; Designer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Personal Portfolio - Developer &amp; Designer</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+<style>
+ 
+
+</style>
 </head>
 <body>
 <header>
@@ -16,6 +22,7 @@
       <li><a href="#home" tabindex="0"><span class="material-icons" aria-hidden="true">home</span>Home</a></li>
       <li><a href="#about" tabindex="0"><span class="material-icons" aria-hidden="true">person</span>About</a></li>
       <li><a href="#projects" tabindex="0"><span class="material-icons" aria-hidden="true">code</span>Projects</a></li>
+      <li><a href="#certificates" tabindex="0"><span class="material-icons" aria-hidden="true">school</span>Certificate</a></li>
       <li><a href="#resume" tabindex="0"><span class="material-icons" aria-hidden="true">description</span>Resume</a></li>
       <li><a href="#contact" tabindex="0"><span class="material-icons" aria-hidden="true">mail</span>Contact</a></li>
     </ul>
@@ -52,9 +59,12 @@
 <div class="skill-chip" role="listitem" tabindex="0">Laravel</div>
 <div class="skill-chip" role="listitem" tabindex="0">JavaScript (ES6+)</div>
 <div class="skill-chip" role="listitem" tabindex="0">JQuery</div>
+<div class="skill-chip" role="listitem" tabindex="0">RESTful APIs</div>
+
 
 <!-- Web Technologies -->
-<div class="skill-chip" role="listitem" tabindex="0">HTML5 &amp; CSS3</div>
+<div class="skill-chip" role="listitem" tabindex="0">HTML5</div>
+<div class="skill-chip" role="listitem" tabindex="0">CSS3</div>
 <div class="skill-chip" role="listitem" tabindex="0">Bootstrap 5</div>
 <div class="skill-chip" role="listitem" tabindex="0">Responsive Design</div>
 
@@ -65,10 +75,11 @@
 
 <!-- Version Control -->
 <div class="skill-chip" role="listitem" tabindex="0">Git &amp; GitHub</div>
+<div class="skill-chip" role="listitem" tabindex="0">MVC Architecture</div>
 
   </section>
 
-  <!-- Projects Section -->
+   <!-- Projects Section -->
  
 <section id="projects" class="container" data-animate>
   <h2 class="section-heading">Projects</h2>
@@ -134,6 +145,39 @@ Ticket Master
   </div>
 </section>
 
+<!-- Certificates -->
+<section id="certificates" class="certificatecontainer" data-animate>
+  <h2 class="section-heading">Certificates</h2>
+  <div class="certificates-grid" role="list">
+
+    <article class="certificate-card" role="listitem" tabindex="0" aria-label="Fullstack Developer Certificate">
+      <img src="img/certificate/Googleprompt.jpg" 
+           alt="Fullstack Developer Certificate preview" 
+           class="certificate-image" />
+      <h3 class="certificate-title">Fullstack Developer</h3>
+      <p class="certificate-desc">Issued by Cousera</p>
+    </article>
+
+    <article class="certificate-card" role="listitem" tabindex="0" aria-label="Book Heaven Certificate">
+      <img src="img/certificate/fullstack.jpg" 
+           alt="Book Heaven Certificate preview" 
+           class="certificate-image" />
+      <h3 class="certificate-title">Book Heaven</h3>
+      <p class="certificate-desc">Issued by Cousera</p>
+    </article>
+
+    <article class="certificate-card" role="listitem" tabindex="0" aria-label="Portfolio Website Certificate">
+      <img src="img/certificate/web.jpg" 
+           alt="Portfolio Website Certificate preview" 
+           class="certificate-image" />
+      <h3 class="certificate-title">Portfolio Website</h3>
+      <p class="certificate-desc">Issued by Google</p>
+    </article>
+
+  </div>
+</section>
+
+
 
   <!-- Resume Section -->
   <section id="resume" class="container" data-animate>
@@ -158,7 +202,7 @@ Ticket Master
       <button type="submit" aria-label="Send message">Send Message</button>
     </form>
   </section> -->
-<section id="contact" class="container" data-animate>
+  <section id="contact" class="container" data-animate>
   <h2 class="section-heading">Contact Me</h2>
       <form id="contactForm" aria-label="Contact form">
 
@@ -182,6 +226,7 @@ Ticket Master
 </form>
   </div>
 </section>
+
 </main>
 
 <footer>
@@ -202,31 +247,23 @@ Ticket Master
     </div>
   </div>
 </div>
-  <script src="js/script.js"></script>
 
+<!-- certificates -->
+ <!-- Certificate Modal -->
+<div class="crmodal-overlay" id="certificateModal" role="dialog" aria-modal="true" aria-labelledby="certificateModalTitle" aria-describedby="certificateModalDescription">
+  <div class="crmodal" tabindex="-1">
+    <button class="close-btn" id="certificateModalCloseBtn" aria-label="Close certificate details">&times;</button>
+    <h3 id="certificateModalTitle"></h3>
+    <p class="description" id="certificateModalDescription"></p>
+    <div class="main-image-wrapper" id="certificateModalImageWrapper">
+      <img src="img/certificate/Googleprompt.jpg" alt="Certificate preview" id="certificateModalImage"/>
+    </div>
+    
+  </div>
+</div>
+
+  <script src="main.js"></script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
