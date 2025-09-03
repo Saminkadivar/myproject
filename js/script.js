@@ -255,3 +255,53 @@ description: 'An online book rental platform with user-friendly UI, security dep
       closeModal();
     }
   });
+
+
+// Select modal elements
+const certificateModal = document.getElementById("certificateModal");
+const certificateModalCloseBtn = document.getElementById("certificateModalCloseBtn");
+const certificateModalTitle = document.getElementById("certificateModalTitle");
+const certificateModalDescription = document.getElementById("certificateModalDescription");
+const certificateModalImage = document.getElementById("certificateModalImage");
+
+// Select all certificate cards
+const certificateCards = document.querySelectorAll(".certificate-card");
+
+// Add click event for each certificate card
+certificateCards.forEach(card => {
+  card.addEventListener("click", () => {
+    // Get details from the clicked card
+    const title = card.querySelector(".certificate-title").innerText;
+    const desc = card.querySelector(".certificate-desc").innerText;
+    const imgSrc = card.querySelector("img").getAttribute("src");
+    const imgAlt = card.querySelector("img").getAttribute("alt");
+
+    // Update modal content
+    certificateModalTitle.innerText = title;
+    certificateModalDescription.innerText = desc;
+    certificateModalImage.src = imgSrc;
+    certificateModalImage.alt = imgAlt;
+
+    // Show modal
+    certificateModal.classList.add("active");
+  });
+});
+
+// Close modal on button click
+certificateModalCloseBtn.addEventListener("click", () => {
+  certificateModal.classList.remove("active");
+});
+
+// Close modal on overlay click
+certificateModal.addEventListener("click", (e) => {
+  if (e.target === certificateModal) {
+    certificateModal.classList.remove("active");
+  }
+});
+
+// Optional: close modal with Escape key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && certificateModal.classList.contains("active")) {
+    certificateModal.classList.remove("active");
+  }
+});
