@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Personal Portfolio - Developer &amp; Designer</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- Basic Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Title & Description -->
+  <title>Samin Kadivar | PHP & Laravel Web Developer Portfolio</title>
+  <meta name="description" content="Explore the portfolio of Samin Kadivar, a passionate PHP & Laravel web developer. Projects include e-commerce, weather apps, and responsive websites with modern UI/UX." />
+  <meta name="keywords" content="Samin Kadivar, Web Developer, PHP Developer, Laravel Developer, Fullstack Developer, Portfolio, MySQL, JavaScript, GitHub" />
+  <meta name="author" content="Samin Kadivar" />
+
+  <!-- Open Graph for Social Sharing -->
+  <meta property="og:title" content="Samin Kadivar | PHP & Laravel Web Developer Portfolio" />
+  <meta property="og:description" content="Passionate web developer specializing in PHP, Laravel, and responsive web design. Check out my projects and certificates." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://saminkadivar.github.io/myproject/" />
+  <meta property="og:image" content="https://saminkadivar.github.io/myproject/img/logo.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Samin Kadivar | PHP & Laravel Web Developer Portfolio" />
+  <meta name="twitter:description" content="Check out my projects in PHP, Laravel, MySQL, and responsive web development." />
+  <meta name="twitter:image" content="https://saminkadivar.github.io/myproject/img/logo.jpg" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
 
-<style>
- 
-
-</style>
 </head>
 <body>
 <header>
@@ -21,7 +40,7 @@
       <li><a href="#home" tabindex="0"><span class="material-icons" aria-hidden="true">home</span>Home</a></li>
       <li><a href="#about" tabindex="0"><span class="material-icons" aria-hidden="true">person</span>About</a></li>
       <li><a href="#projects" tabindex="0"><span class="material-icons" aria-hidden="true">code</span>Projects</a></li>
-      <li><a href="#certificates" tabindex="0"><span class="material-icons" aria-hidden="true">school</span>Certificate</a></li>
+      <li><a href="#certificates" tabindex="0"><span class="material-icons" aria-hidden="true">school</span>Certificates</a></li>
       <li><a href="#resume" tabindex="0"><span class="material-icons" aria-hidden="true">description</span>Resume</a></li>
       <li><a href="#contact" tabindex="0"><span class="material-icons" aria-hidden="true">mail</span>Contact</a></li>
     </ul>
@@ -36,11 +55,11 @@
   <!-- Home / Hero Section -->
   <section class="hero container" id="home" role="main" data-animate>
     <div class="hero-photo">
-      <img src="img/logo.jpg"  alt="Professional photograph of the web developer showing friendly and confident expression with green tinted border" />
+      <img src="img/logo.jpg" alt="Samin Kadivar - PHP & Laravel Web Developer profile photo" />
     </div>
     <div class="hero-content">
-      <h1>Welcome, I'm Samin Kadivar</h1>
-      <p>A passionate web developer creating beautiful, functional, and responsive websites that deliver exceptional user experiences. Let's build amazing digital products together.</p>
+      <h1>Samin Kadivar – PHP & Laravel Developer</h1>
+      <p>I am a passionate web developer creating beautiful, functional, and responsive websites that deliver exceptional user experiences.</p>
       <button class="btn-contact" aria-label="Contact me button" onclick="location.href='#contact'">Get in Touch</button>
     </div>
   </section>
@@ -48,225 +67,135 @@
   <!-- About Section -->
   <section id="about" class="container" data-animate>
     <h2 class="section-heading">About Me</h2>
-    <p>Hello! I am a passionate web developer with expertise in building modern, responsive, and engaging user interfaces. I love turning ideas into real digital experiences.</p>
+    <p>Hello! I am a dedicated web developer with expertise in building modern, responsive, and engaging user interfaces. I love turning ideas into real digital experiences.</p>
     <p>My core skills and technologies include:</p>
     <div class="skills" role="list">
-  <!-- Core Programming Languages -->
-<div class="skill-chip" role="listitem" tabindex="0">C &amp; C++</div>
-<!-- <div class="skill-chip" role="listitem" tabindex="0">Java</div> -->
-<div class="skill-chip" role="listitem" tabindex="0">PHP</div>
-<div class="skill-chip" role="listitem" tabindex="0">Laravel</div>
-<div class="skill-chip" role="listitem" tabindex="0">JavaScript (ES6+)</div>
-<div class="skill-chip" role="listitem" tabindex="0">JQuery</div>
-<div class="skill-chip" role="listitem" tabindex="0">RESTful APIs</div>
-
-
-<!-- Web Technologies -->
-<div class="skill-chip" role="listitem" tabindex="0">HTML5</div>
-<div class="skill-chip" role="listitem" tabindex="0">CSS3</div>
-<div class="skill-chip" role="listitem" tabindex="0">Bootstrap 5</div>
-<div class="skill-chip" role="listitem" tabindex="0">Responsive Design</div>
-
-
-
-<!-- Database -->
-<div class="skill-chip" role="listitem" tabindex="0">MySQL</div>
-
-<!-- Version Control -->
-<div class="skill-chip" role="listitem" tabindex="0">Git &amp; GitHub</div>
-<div class="skill-chip" role="listitem" tabindex="0">MVC Architecture</div>
-
+      <div class="skill-chip" role="listitem">C &amp; C++</div>
+      <div class="skill-chip" role="listitem">PHP</div>
+      <div class="skill-chip" role="listitem">Laravel</div>
+      <div class="skill-chip" role="listitem">JavaScript (ES6+)</div>
+      <div class="skill-chip" role="listitem">jQuery</div>
+      <div class="skill-chip" role="listitem">RESTful APIs</div>
+      <div class="skill-chip" role="listitem">HTML5</div>
+      <div class="skill-chip" role="listitem">CSS3</div>
+      <div class="skill-chip" role="listitem">Bootstrap 5</div>
+      <div class="skill-chip" role="listitem">Responsive Design</div>
+      <div class="skill-chip" role="listitem">MySQL</div>
+      <div class="skill-chip" role="listitem">Git &amp; GitHub</div>
+      <div class="skill-chip" role="listitem">MVC Architecture</div>
+    </div>
   </section>
 
-   <!-- Projects Section -->
- 
-<section id="projects" class="container" data-animate>
-  <h2 class="section-heading">Projects</h2>
-  <div class="projects-grid" role="list">
+  <!-- Projects Section -->
+  <section id="projects" class="container" data-animate>
+    <h2 class="section-heading">Projects</h2>
+    <div class="projects-grid" role="list">
 
-       <article class="project-card" role="listitem" tabindex="0" aria-label="Laravel E-commerce Project" data-project-id="laravelecommerce">
-  <img src="img/laravel project/homepage.png" 
-       alt="Laravel E-commerce homepage screenshot with product listings and shopping cart" class="project-image"/>
-  <h3 class="project-title">
-    Laravel E-commerce
-    <a href="https://github.com/username/laravel-ecommerce" target="_blank" rel="noopener" aria-label="GitHub repository link for Laravel E-commerce project" class="project-github-link">
-      <span class="material-icons">code</span>
-    </a>
-  </h3>
-  <p class="project-desc">
-    A Laravel-based E-commerce web application with authentication, product catalog, cart, checkout, and order management features.
-  </p>
-</article>
+      <article class="project-card" role="listitem" aria-label="Laravel E-commerce Project">
+        <img src="img/laravel project/homepage.png" alt="Screenshot of Laravel E-commerce project homepage" class="project-image" />
+        <h3 class="project-title">
+          Laravel E-commerce
+          <a href="https://github.com/username/laravel-ecommerce" target="_blank" rel="noopener" aria-label="GitHub link for Laravel E-commerce project">
+            <span class="material-icons">code</span>
+          </a>
+        </h3>
+        <p class="project-desc">A Laravel-based e-commerce application with authentication, product catalog, cart, checkout, and order management features.</p>
+      </article>
 
-    <article class="project-card" role="listitem" tabindex="0" aria-label="Project Weather App" data-project-id="TicketMaster">
-      <img src="img/ticket master/udashboard.webp" 
-           alt="Weather App showing daily and weekly forecast UI with green highlights" 
-           class="project-image" />
-      <h3 class="project-title">
-Ticket Master
-        <a href="https://github.com/Saminkadivar/Ticket-Master.git" target="_blank" rel="noopener" aria-label="GitHub repository link for Weather App" class="project-github-link">
-          <span class="material-icons">code</span>
-        </a>
-      </h3>
-      <p class="project-desc">A modern weather application providing real-time updates and forecast in a sleek UI.</p>
-    </article>
+      <article class="project-card" role="listitem" aria-label="Ticket Master Weather App">
+        <img src="img/ticket master/udashboard.webp" alt="Weather app dashboard with forecasts and green highlights" class="project-image" />
+        <h3 class="project-title">
+          Ticket Master
+          <a href="https://github.com/Saminkadivar/Ticket-Master.git" target="_blank" rel="noopener" aria-label="GitHub link for Ticket Master project">
+            <span class="material-icons">code</span>
+          </a>
+        </h3>
+        <p class="project-desc">A modern weather application providing real-time updates and forecasts in a sleek UI.</p>
+      </article>
 
-    <article class="project-card" role="listitem" tabindex="0" aria-label="Project Task Manager" data-project-id="BookHeaven">
-            <img src="img/book heave/bk1.webp" 
+      <article class="project-card" role="listitem" aria-label="Book Heaven Task Manager">
+        <img src="img/book heave/bk1.webp" alt="Task Manager app screenshot with task list and progress indicators" class="project-image" />
+        <h3 class="project-title">
+          Book Heaven
+          <a href="https://github.com/Saminkadivar/Book-heaven.git" target="_blank" rel="noopener" aria-label="GitHub link for Book Heaven project">
+            <span class="material-icons">code</span>
+          </a>
+        </h3>
+        <p class="project-desc">A task management tool with deadlines, priorities, and notifications.</p>
+      </article>
 
-      alt="Task Manager app screenshot showing task list and progress with green accents" 
-           class="project-image" />
-      <h3 class="project-title">
-        Book Heaven
-        <a href="https://github.com/Saminkadivar/Book-heaven.git" target="_blank" rel="noopener" aria-label="GitHub repository link for Task Manager" class="project-github-link">
-          <span class="material-icons">code</span>
-        </a>
-      </h3>
-      <p class="project-desc">A task management tool with deadlines, priorities, and notifications.</p>
-    </article>
+      <article class="project-card" role="listitem" aria-label="Portfolio Website">
+        <img src="img/my project/homepage.webp" alt="Screenshot of personal portfolio website homepage" class="project-image" />
+        <h3 class="project-title">
+          Portfolio Website
+          <a href="https://github.com/username/portfolio" target="_blank" rel="noopener" aria-label="GitHub link for Portfolio Website project">
+            <span class="material-icons">code</span>
+          </a>
+        </h3>
+        <p class="project-desc">Personal website showcasing projects, skills, and contact information with responsive design.</p>
+      </article>
 
-    <article class="project-card" role="listitem" tabindex="0" aria-label="Project Portfolio Website" data-project-id="portfolioWebsite">
-      <img src="img/my project/homepage.webp" 
-           alt="Portfolio Website homepage screenshot with navigation and project previews" 
-           class="project-image" />
-      <h3 class="project-title">
-        Portfolio Website
-        <a href="https://github.com/username/portfolio" target="_blank" rel="noopener" aria-label="GitHub repository link for Portfolio Website" class="project-github-link">
-          <span class="material-icons">code</span>
-        </a>
-      </h3>
-      <p class="project-desc">Personal website showcasing projects, skills, and contact information with responsive design.</p>
-    </article>
+    </div>
+  </section>
 
- 
+  <!-- Certificates -->
+  <section id="certificates" class="certificatecontainer" data-animate>
+    <h2 class="section-heading">Certificates</h2>
+    <div class="certificates-grid" role="list">
 
+      <article class="certificate-card" role="listitem" aria-label="Fullstack Developer Certificate">
+        <img src="img/certificate/Googleprompt.jpg" alt="Fullstack Developer certificate preview" class="certificate-image" />
+        <h3 class="certificate-title">Fullstack Developer</h3>
+        <p class="certificate-desc">Issued by Coursera</p>
+      </article>
 
-  </div>
-</section>
+      <article class="certificate-card" role="listitem" aria-label="Book Heaven Certificate">
+        <img src="img/certificate/fullstack.jpg" alt="Book Heaven certificate preview" class="certificate-image" />
+        <h3 class="certificate-title">Book Heaven</h3>
+        <p class="certificate-desc">Issued by Coursera</p>
+      </article>
 
-<!-- Certificates -->
-<section id="certificates" class="certificatecontainer" data-animate>
-  <h2 class="section-heading">Certificates</h2>
-  <div class="certificates-grid" role="list">
+      <article class="certificate-card" role="listitem" aria-label="Portfolio Website Certificate">
+        <img src="img/certificate/web.jpg" alt="Portfolio Website certificate preview" class="certificate-image" />
+        <h3 class="certificate-title">Portfolio Website</h3>
+        <p class="certificate-desc">Issued by Google</p>
+      </article>
 
-    <article class="certificate-card" role="listitem" tabindex="0" aria-label="Fullstack Developer Certificate">
-      <img src="img/certificate/Googleprompt.jpg" 
-           alt="Fullstack Developer Certificate preview" 
-           class="certificate-image" />
-      <h3 class="certificate-title">Fullstack Developer</h3>
-      <p class="certificate-desc">Issued by Cousera</p>
-    </article>
-
-    <article class="certificate-card" role="listitem" tabindex="0" aria-label="Book Heaven Certificate">
-      <img src="img/certificate/fullstack.jpg" 
-           alt="Book Heaven Certificate preview" 
-           class="certificate-image" />
-      <h3 class="certificate-title">Book Heaven</h3>
-      <p class="certificate-desc">Issued by Cousera</p>
-    </article>
-
-    <article class="certificate-card" role="listitem" tabindex="0" aria-label="Portfolio Website Certificate">
-      <img src="img/certificate/web.jpg" 
-           alt="Portfolio Website Certificate preview" 
-           class="certificate-image" />
-      <h3 class="certificate-title">Portfolio Website</h3>
-      <p class="certificate-desc">Issued by Google</p>
-    </article>
-
-  </div>
-</section>
-
-
+    </div>
+  </section>
 
   <!-- Resume Section -->
   <section id="resume" class="container" data-animate>
-    <h2 class="section-heading">Resume</h2> 
+    <h2 class="section-heading">Resume</h2>
     <p>Download my full resume in PDF format for more details on my experience, education, and skills.</p>
     <a href="img/resume/samin_resume.pdf" download="samin_resume.pdf" class="btn-resume" aria-label="Download Resume PDF">Download Resume</a>
   </section>
 
   <!-- Contact Section -->
-  <!-- <section id="contact" class="container" data-animate>
-    <h2 class="section-heading">Contact Me</h2>
-    <form id="contactForm" aria-label="Contact form">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your full name" />
-
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com" />
-
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" required placeholder="Write your message here"></textarea>
-
-      <button type="submit" aria-label="Send message">Send Message</button>
-    </form>
-  </section> -->
   <section id="contact" class="container" data-animate>
-  <h2 class="section-heading">Contact Me</h2>
-      <form id="contactForm" aria-label="Contact form">
-
-  <div class="contact-details">
-    <p><strong>GitHub:</strong> 
-      <a href="https://github.com/Saminkadivar" target="_blank" rel="noopener noreferrer">
-        github.com/Saminkadivar
-      </a>
-    </p>
-    <p><strong>LinkedIn:</strong> 
-      <a href="https://www.linkedin.com/in/samin-kadivar-991687242?" target="_blank" rel="noopener noreferrer">
-        linkedin.com/in/saminkadivar
-      </a>
-    </p>
-    <p><strong>Email:</strong> 
-      <a href="mailto:saminkadivar1@gmail.com">saminkadivar1@gmail.com </a>
-    </p>
-    <p><strong>Phone:</strong> 
-      <a href="tel:+918200026182">+91 8200026182  </a>
-    </p>
-</form>
-  </div>
-</section>
-
+    <h2 class="section-heading">Contact Me</h2>
+    <div class="contact-details">
+      <p><strong>GitHub:</strong>
+        <a href="https://github.com/Saminkadivar" target="_blank" rel="noopener noreferrer">github.com/Saminkadivar</a>
+      </p>
+      <p><strong>LinkedIn:</strong>
+        <a href="https://www.linkedin.com/in/samin-kadivar-991687242?" target="_blank" rel="noopener noreferrer">linkedin.com/in/saminkadivar</a>
+      </p>
+      <p><strong>Email:</strong>
+        <a href="mailto:saminkadivar1@gmail.com">saminkadivar1@gmail.com</a>
+      </p>
+      <p><strong>Phone:</strong>
+        <a href="tel:+918200026182">+91 8200026182</a>
+      </p>
+    </div>
+  </section>
 </main>
 
 <footer>
-  &copy; 2025 samin kadivar. All rights reserved.
+  &copy; 2025 Samin Kadivar. All rights reserved.
 </footer>
 
-<!-- Project Details Modal -->
-<div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDescription">
-  <div class="modal" tabindex="-1">
-    <button class="close-btn" id="modalCloseBtn" aria-label="Close project details">&times;</button>
-    <h3 id="modalTitle"></h3>
-    <p class="description" id="modalDescription"></p>
-    <div class="main-image-wrapper" id="modalMainImageWrapper">
-      <img src="" alt="" id="modalMainImage"/>
-    </div>
-    <div class="images" id="modalThumbnailContainer" role="list" aria-label="Project image thumbnails">
-      <!-- dynamically generated thumbnails -->
-    </div>
-  </div>
-</div>
-
-<!-- certificates -->
- <!-- Certificate Modal -->
-<div class="crmodal-overlay" id="certificateModal" role="dialog" aria-modal="true" aria-labelledby="certificateModalTitle" aria-describedby="certificateModalDescription">
-  <div class="crmodal" tabindex="-1">
-    <button class="close-btn" id="certificateModalCloseBtn" aria-label="Close certificate details">&times;</button>
-    <h3 id="certificateModalTitle"></h3>
-    <p class="description" id="certificateModalDescription"></p>
-    <div class="main-image-wrapper" id="certificateModalImageWrapper">
-      <img src="img/certificate/Googleprompt.jpg" alt="Certificate preview" id="certificateModalImage"/>
-    </div>
-    
-  </div>
-</div>
-
-  <script src="js/script.js"></script>
-
+<!-- JS -->
+<script src="js/script.js"></script>
 </body>
 </html>
-
-
-
-
-
