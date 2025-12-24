@@ -5,9 +5,10 @@
 
   /* CSS Variables for Theming */
   :root {
-    --bg-primary: #ffffff;
-    --bg-secondary: #f8fafc;
-    --bg-tertiary: #f0f9ff;
+    /* Light mode backgrounds slightly toned down */
+    --bg-primary: #f8fafc;   /* off-white */
+    --bg-secondary: #f1f5f9; /* soft gray */
+    --bg-tertiary: #eaf2ff;  /* gentle blue tint */
     --text-primary: #1f2937;
     --text-secondary: #4b5563;
     --text-tertiary: #a0aec0;
@@ -657,7 +658,7 @@ nav ul li a .material-icons {
   @media(max-width: 768px) {
     nav ul {
       flex-direction: column;
-      background: #ffffff;
+      background: var(--bg-primary);
       position: fixed;
       top: 60px;
       right: 0;
