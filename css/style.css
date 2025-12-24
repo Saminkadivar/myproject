@@ -404,6 +404,7 @@ nav ul li a .material-icons {
     margin: 0 0 8px 0;
   }
 
+
   .experience-item:hover h3,
   .experience-item:hover .company,
   .experience-item:hover .duration,
@@ -570,6 +571,7 @@ nav ul li a .material-icons {
     color: #0f172a;
     outline: none;
   }
+  /*  */
   #contact button {
     background: #0ea5e9;
     color: #f1f5f9;
