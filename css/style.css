@@ -41,7 +41,7 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
   background: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
@@ -124,6 +124,7 @@ html[data-theme="dark"] .certificate-card .certificate-desc {
   h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     color: var(--text-primary);
+    font-family: 'Poppins', 'Inter', sans-serif;
   }
   p {
     margin-bottom: 16px;
@@ -798,19 +799,22 @@ nav ul li a .material-icons {
   }
   .modal .images {
     display: flex;
-    gap: 12px;
+    gap: 8px;
     overflow-x: auto;
     margin-bottom: 20px;
+    padding-bottom: 8px; /* give space so scrollbar is visible */
   }
   .modal .images img {
-    max-height: 160px;
-    border-radius: 12px;
+    height: 96px; /* smaller thumbnails */
+    width: auto;
+    border-radius: 10px;
     user-select: none;
     cursor: pointer;
     flex-shrink: 0;
+    object-fit: cover;
     box-shadow: 0 3px 8px #3b82f61f;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 3px solid transparent;
+    border: 2px solid transparent;
   }
   .modal .images img.selected,
   .modal .images img:hover,
@@ -824,6 +828,7 @@ nav ul li a .material-icons {
     flex-grow: 1;
     margin-bottom: 24px;
     text-align: center;
+    position: relative;
   }
   .modal .main-image-wrapper img {
     max-width: 100%;
@@ -832,6 +837,33 @@ nav ul li a .material-icons {
     user-select: none;
     box-shadow: 0 8px 24px #3b82f630;
   }
+  /* Modal image navigation buttons */
+  .modal .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.85;
+    box-shadow: 0 4px 12px var(--shadow-md);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .modal .nav-btn:hover,
+  .modal .nav-btn:focus {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.05);
+    outline: none;
+  }
+  .modal .nav-btn.prev { left: 12px; }
+  .modal .nav-btn.next { right: 12px; }
   .modal .close-btn {
     position: absolute;
     top: 12px;
@@ -1000,18 +1032,18 @@ nav ul li a .material-icons {
   }
 
   .contact-item {
-    background: #f0f9ff;
+    background: var(--bg-tertiary);
     border-radius: 16px;
     padding: 24px;
     text-align: center;
-    border: 2px solid #dbeafe;
-    transition: transform 0.3s ease, background 0.3s ease;
+    border: 2px solid var(--color-primary-light);
+    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
   }
 
   .contact-item:hover {
     transform: translateY(-6px);
-    background: #e0f2fe;
-    border-color: #bfdbfe;
+    background: var(--color-primary-lighter);
+    border-color: var(--color-primary);
   }
 
   .contact-item h3 {
@@ -1021,7 +1053,7 @@ nav ul li a .material-icons {
     gap: 8px;
     font-size: 1.2rem;
     margin-bottom: 12px;
-    color: #3b82f6;
+    color: var(--color-primary);
   }
 
   .contact-item h3 .material-icons {
@@ -1031,4 +1063,15 @@ nav ul li a .material-icons {
   .contact-item a {
     word-break: break-all;
     font-size: 1rem;
+    color: var(--color-primary);
+  }
+
+  /* Dark theme adjustments for contact cards */
+  html[data-theme="dark"] .contact-item {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+  }
+  html[data-theme="dark"] .contact-item:hover {
+    background: var(--bg-tertiary);
+    border-color: var(--color-primary);
   }

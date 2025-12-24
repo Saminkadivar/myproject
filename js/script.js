@@ -104,13 +104,15 @@
   }
   window.addEventListener('scroll', activateAnimations);
   window.addEventListener('load', activateAnimations);
-  // Contact form submission simulation
+  // Contact form submission simulation (guarded if form exists)
   const contactForm = document.getElementById('contactForm');
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Thank you for your message! I will get back to you shortly.');
-    contactForm.reset();
-  });
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you for your message! I will get back to you shortly.');
+      contactForm.reset();
+    });
+  }
 
   // Project data for modal
   const projectsData = {
@@ -204,12 +206,19 @@ description: 'An online book rental platform with user-friendly UI, security dep
   const modalMainImage = document.getElementById('modalMainImage');
   const modalThumbnailContainer = document.getElementById('modalThumbnailContainer');
   const modalCloseBtn = document.getElementById('modalCloseBtn');
+  const modalMainImageWrapper = document.getElementById('modalMainImageWrapper');
   let currentImageIndex = 0;
+  let currentProjectId = null;
+  let slideInterval = null;
 
   // Function to open modal with project data
   function openModal(projectId) {
     const data = projectsData[projectId];
     if (!data) return;
+
+    // track current project
+    currentProjectId = projectId;
+    modalOverlay.dataset.currentProject = projectId;
 
     modalTitle.textContent = data.title;
     modalDescription.textContent = data.description;
@@ -238,6 +247,11 @@ description: 'An online book rental platform with user-friendly UI, security dep
 
     currentImageIndex = 0;
     setMainImage(0);
+
+    // Ensure navigation buttons exist
+    ensureNavButtons();
+    // Start slideshow
+    startSlideshow();
     modalOverlay.classList.add('active');
     // Focus modal for accessibility
     modalOverlay.querySelector('.modal').focus();
@@ -247,11 +261,11 @@ description: 'An online book rental platform with user-friendly UI, security dep
 
   // Function to set main image in modal
   function setMainImage(index) {
-    const data = projectsData[document.querySelector('.modal-overlay.active')?.dataset.currentProject];
+    const data = currentProjectId ? projectsData[currentProjectId] : null;
     if (!data) return;
 
     currentImageIndex = index;
-    // modalMainImage.src = data.images[index].src;
+    // force image refresh to avoid caching artifacts
     modalMainImage.src = data.images[index].src + '?t=' + new Date().getTime();
 
     modalMainImage.alt = data.images[index].alt;
@@ -261,11 +275,71 @@ description: 'An online book rental platform with user-friendly UI, security dep
     Array.from(modalThumbnailContainer.children).forEach((thumb, i) => {
       thumb.classList.toggle('selected', i === index);
     });
+    // reset slideshow timer on manual change
+    restartSlideshow();
+  }
+
+  function nextImage() {
+    const data = currentProjectId ? projectsData[currentProjectId] : null;
+    if (!data) return;
+    const total = data.images.length;
+    currentImageIndex = (currentImageIndex + 1) % total;
+    setMainImage(currentImageIndex);
+  }
+
+  function prevImage() {
+    const data = currentProjectId ? projectsData[currentProjectId] : null;
+    if (!data) return;
+    const total = data.images.length;
+    currentImageIndex = (currentImageIndex - 1 + total) % total;
+    setMainImage(currentImageIndex);
+  }
+
+  function ensureNavButtons() {
+    if (!document.getElementById('modalPrevBtn')) {
+      const prevBtn = document.createElement('button');
+      prevBtn.className = 'nav-btn prev';
+      prevBtn.id = 'modalPrevBtn';
+      prevBtn.setAttribute('aria-label', 'Previous image');
+      prevBtn.innerHTML = '<span class="material-icons">chevron_left</span>';
+      prevBtn.addEventListener('click', (e) => { e.stopPropagation(); prevImage(); });
+      modalMainImageWrapper.appendChild(prevBtn);
+    }
+    if (!document.getElementById('modalNextBtn')) {
+      const nextBtn = document.createElement('button');
+      nextBtn.className = 'nav-btn next';
+      nextBtn.id = 'modalNextBtn';
+      nextBtn.setAttribute('aria-label', 'Next image');
+      nextBtn.innerHTML = '<span class="material-icons">chevron_right</span>';
+      nextBtn.addEventListener('click', (e) => { e.stopPropagation(); nextImage(); });
+      modalMainImageWrapper.appendChild(nextBtn);
+    }
+    // Click on main image advances to next
+    modalMainImage.onclick = () => nextImage();
+  }
+
+  function startSlideshow() {
+    stopSlideshow();
+    slideInterval = setInterval(nextImage, 3000);
+  }
+
+  function stopSlideshow() {
+    if (slideInterval) {
+      clearInterval(slideInterval);
+      slideInterval = null;
+    }
+  }
+
+  function restartSlideshow() {
+    if (slideInterval) {
+      startSlideshow();
+    }
   }
 
   // Function to close modal
   function closeModal() {
     modalOverlay.classList.remove('active');
+    stopSlideshow();
     // Enable scroll
     document.body.style.overflow = '';
     // Return focus to last focused project card (optional)
@@ -283,7 +357,6 @@ description: 'An online book rental platform with user-friendly UI, security dep
       const projectId = card.dataset.projectId;
       if (projectId) {
         lastFocusedProjectCard = card;
-        modalOverlay.dataset.currentProject = projectId;
         openModal(projectId);
       }
     });
@@ -293,10 +366,16 @@ description: 'An online book rental platform with user-friendly UI, security dep
         const projectId = card.dataset.projectId;
         if (projectId) {
           lastFocusedProjectCard = card;
-          modalOverlay.dataset.currentProject = projectId;
           openModal(projectId);
         }
       }
+    });
+  });
+
+  // Prevent card click when clicking GitHub link inside the card
+  document.querySelectorAll('.project-github-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.stopPropagation();
     });
   });
 
@@ -317,6 +396,10 @@ description: 'An online book rental platform with user-friendly UI, security dep
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
       closeModal();
+    }
+    if (modalOverlay.classList.contains('active')) {
+      if (e.key === 'ArrowRight') { e.preventDefault(); nextImage(); }
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); prevImage(); }
     }
   });
 
