@@ -14,6 +14,70 @@
       toggleMenu();
     }
   });
+
+  // Dark Mode Toggle
+  const themeToggleBtn = document.getElementById('themeToggleBtn');
+  const htmlElement = document.documentElement;
+  const themeIcon = themeToggleBtn.querySelector('.material-icons');
+
+  // Check for saved theme preference or default to light mode
+  function initTheme() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
+  }
+
+  function setTheme(theme) {
+    if (theme === 'dark') {
+      htmlElement.setAttribute('data-theme', 'dark');
+      themeIcon.textContent = 'light_mode';
+      localStorage.setItem('theme', 'dark');
+    } else {
+      htmlElement.removeAttribute('data-theme');
+      themeIcon.textContent = 'dark_mode';
+      localStorage.setItem('theme', 'light');
+    }
+  }
+
+  function toggleTheme() {
+    const currentTheme = htmlElement.getAttribute('data-theme') || 'light';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+  }
+
+  // Add click event listener to theme toggle button
+  themeToggleBtn.addEventListener('click', toggleTheme);
+  
+  // Add keyboard support for theme toggle
+  themeToggleBtn.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleTheme();
+    }
+  });
+
+  // Initialize theme on page load
+  initTheme();
+
+  // Scroll to Top Button
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      scrollToTopBtn.classList.add('visible');
+    } else {
+      scrollToTopBtn.classList.remove('visible');
+    }
+  });
+
+  scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  scrollToTopBtn.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {
@@ -54,34 +118,34 @@
       title: 'Laravel E-commerce',
       description: 'A Laravel-based E-commerce web application with authentication, product catalog, cart, checkout, and order management features.',
       images: [
-{src: 'img/laravel project/homepage.png', alt: ''},
-{src: 'img/laravel project/login.png', alt: ''},
-{src: 'img/laravel project/register.png', alt: ''},
-{src: 'img/laravel project/product.png', alt: ''},
-{src: 'img/laravel project/search.png', alt: ''},
-{src: 'img/laravel project/view.png', alt: ''},
-{src: 'img/laravel project/cart.png', alt: ''},
-{src: 'img/laravel project/checkout.png', alt: ''},
-{src: 'img/laravel project/order.png', alt: ''},
-{src: 'img/laravel project/invoice.png', alt: ''},
-{src: 'img/laravel project/profile.png', alt: ''},
-{src: 'img/laravel project/forgot.png', alt: ''},
-{src: 'img/laravel project/admin/login.png', alt: ''},
-{src: 'img/laravel project/admin/homepage.png', alt: ''},
-{src: 'img/laravel project/admin/salereport.png', alt: ''},
-{src: 'img/laravel project/admin/productview.png', alt: ''},
-{src: 'img/laravel project/admin/addproduct.png', alt: ''},
-{src: 'img/laravel project/admin/vendor.png', alt: ''},
-{src: 'img/laravel project/admin/user.png', alt: ''},
-{src: 'img/laravel project/admin/profile.png', alt: ''},
-{src: 'img/laravel project/vendor/login.png', alt: ''},
-{src: 'img/laravel project/vendor/register.png', alt: ''},
-{src: 'img/laravel project/vendor/homepage.png', alt: ''},
-{src: 'img/laravel project/vendor/order.png', alt: ''},
-{src: 'img/laravel project/vendor/product.png', alt: ''},
-{src: 'img/laravel project/vendor/addproduct.png', alt: ''},
-{src: 'img/laravel project/vendor/report.png', alt: ''},
-{src: 'img/laravel project/vendor/profle.png', alt: ''},
+{src: 'img/laravel%20project/homepage.png', alt: ''},
+{src: 'img/laravel%20project/login.png', alt: ''},
+{src: 'img/laravel%20project/register.png', alt: ''},
+{src: 'img/laravel%20project/product.png', alt: ''},
+{src: 'img/laravel%20project/search.png', alt: ''},
+{src: 'img/laravel%20project/view.png', alt: ''},
+{src: 'img/laravel%20project/cart.png', alt: ''},
+{src: 'img/laravel%20project/checkout.png', alt: ''},
+{src: 'img/laravel%20project/order.png', alt: ''},
+{src: 'img/laravel%20project/invoice.png', alt: ''},
+{src: 'img/laravel%20project/profile.png', alt: ''},
+{src: 'img/laravel%20project/forgot.png', alt: ''},
+{src: 'img/laravel%20project/admin/login.png', alt: ''},
+{src: 'img/laravel%20project/admin/homepage.png', alt: ''},
+{src: 'img/laravel%20project/admin/salereport.png', alt: ''},
+{src: 'img/laravel%20project/admin/productview.png', alt: ''},
+{src: 'img/laravel%20project/admin/addproduct.png', alt: ''},
+{src: 'img/laravel%20project/admin/vendor.png', alt: ''},
+{src: 'img/laravel%20project/admin/user.png', alt: ''},
+{src: 'img/laravel%20project/admin/profile.png', alt: ''},
+{src: 'img/laravel%20project/vendor/login.png', alt: ''},
+{src: 'img/laravel%20project/vendor/register.png', alt: ''},
+{src: 'img/laravel%20project/vendor/homepage.png', alt: ''},
+{src: 'img/laravel%20project/vendor/order.png', alt: ''},
+{src: 'img/laravel%20project/vendor/product.png', alt: ''},
+{src: 'img/laravel%20project/vendor/addproduct.png', alt: ''},
+{src: 'img/laravel%20project/vendor/report.png', alt: ''},
+{src: 'img/laravel%20project/vendor/profle.png', alt: ''},
 
         
 
@@ -92,42 +156,42 @@
       title: 'Ticket Master',
       description: 'A cinema ticket booking system with seat selection, payment gateway integration, and printable tickets.',
       images: [
-        {src: 'img/ticket master/udashboard.webp', alt: ''},
-        {src: 'img/ticket master/moviedetail.webp', alt: ''},
-        {src: 'img/ticket master/showtime.webp', alt: ''},
-        {src: 'img/ticket master/seatselect.webp', alt: ''},
-        {src: 'img/ticket master/paymentoption.webp', alt: ''},
-        {src: 'img/ticket master/onlinepayment.webp', alt: ''},
-        {src: 'img/ticket master/paymentconfirm.webp', alt: ''},
-        {src: 'img/ticket master/ticketprint.webp', alt: ''},
+        {src: 'img/ticket%20master/udashboard.webp', alt: ''},
+        {src: 'img/ticket%20master/moviedetail.webp', alt: ''},
+        {src: 'img/ticket%20master/showtime.webp', alt: ''},
+        {src: 'img/ticket%20master/seatselect.webp', alt: ''},
+        {src: 'img/ticket%20master/paymentoption.webp', alt: ''},
+        {src: 'img/ticket%20master/onlinepayment.webp', alt: ''},
+        {src: 'img/ticket%20master/paymentconfirm.webp', alt: ''},
+        {src: 'img/ticket%20master/ticketprint.webp', alt: ''},
       ]
     },
     BookHeaven: {
       title: 'Book Heaven',
 description: 'An online book rental platform with user-friendly UI, security deposit tracking, and overdue handling.',
       images: [
-           {src: 'img/book heave/ba1.webp', alt: ''},
-        {src: 'img/book heave/bk2.webp', alt: ''},
-        {src: 'img/book heave/bk3.webp', alt: ''},
-        {src: 'img/book heave/bk4.webp', alt: ''},
-        {src: 'img/book heave/bk5.webp', alt: ''},
-        {src: 'img/book heave/bk6.webp', alt: ''},
-        {src: 'img/book heave/ba1.webp', alt: ''},
-        {src: 'img/book heave/ba2.webp', alt: ''},
-        {src: 'img/book heave/ba3.webp', alt: ''},
-        {src: 'img/book heave/ba4.webp', alt: ''},
-        {src: 'img/book heave/ba5.webp', alt: ''},
+           {src: 'img/book%20heave/ba1.webp', alt: ''},
+        {src: 'img/book%20heave/bk2.webp', alt: ''},
+        {src: 'img/book%20heave/bk3.webp', alt: ''},
+        {src: 'img/book%20heave/bk4.webp', alt: ''},
+        {src: 'img/book%20heave/bk5.webp', alt: ''},
+        {src: 'img/book%20heave/bk6.webp', alt: ''},
+        {src: 'img/book%20heave/ba1.webp', alt: ''},
+        {src: 'img/book%20heave/ba2.webp', alt: ''},
+        {src: 'img/book%20heave/ba3.webp', alt: ''},
+        {src: 'img/book%20heave/ba4.webp', alt: ''},
+        {src: 'img/book%20heave/ba5.webp', alt: ''},
         ]
     },
     portfolioWebsite: {
       title: 'Portfolio Website',
       description: 'Personal website showcasing projects, skills, and contact information with responsive design and modern UI/UX elements.',
       images: [
-                {src: 'img/my project/homepage.webp', alt: ''},
-                {src: 'img/my project/about.webp', alt: ''},
-                {src: 'img/my project/project.webp', alt: ''},
-                {src: 'img/my project/projetimg.webp', alt: ''},
-                {src: 'img/my project/contactus.webp', alt: ''},
+                {src: 'img/my%20project/homepage.webp', alt: ''},
+                {src: 'img/my%20project/about.webp', alt: ''},
+                {src: 'img/my%20project/project.webp', alt: ''},
+                {src: 'img/my%20project/projetimg.webp', alt: ''},
+                {src: 'img/my%20project/contactus.webp', alt: ''},
 
     ]
     }
